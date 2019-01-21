@@ -4,4 +4,8 @@ require 'interactive_record.rb'
 
 class Student < InteractiveRecord
 
+  self.column_names.each do |attribute_name|
+    attr_accessor attribute_name.to_sym
+  end
+
 end
